@@ -1,11 +1,14 @@
 import React from "react";
+import HeroSection from "./Components/HeroSection";
 
 const About = () => {
+  const data = {
+    name: "Stop & Shop Mart",
+  };
   return (
-    <div>
-      About
-      <img src="logo1.jpg" alt="" srcset="" />
-    </div>
+    <>
+      <HeroSection myData={data} />
+    </>
   );
 };
 
