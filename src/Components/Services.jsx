@@ -9,7 +9,9 @@ const Services = () => {
     <>
       <Wrapper>
         <div className="container">
-          <div className="gird grid-three-column">
+          <h2>Our Services</h2>
+
+          <div className="grid grid-three-column">
             <div className="services-1">
               <div>
                 <TbTruckDelivery className="icons" />
@@ -62,7 +64,7 @@ const Wrapper = styled.section`
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    background: ${({ theme }) => theme.colors.bg};
+    background: #dbe2e7;
     text-align: center;
     border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
@@ -74,7 +76,7 @@ const Wrapper = styled.section`
     box-shadow: none;
 
     .services-column-2 {
-      background: ${({ theme }) => theme.colors.bg};
+      background: #dbe2e7;
       display: flex;
       flex-direction: row;
       flex: 1;

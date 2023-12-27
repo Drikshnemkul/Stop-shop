@@ -58,7 +58,8 @@ h1 {
    font-size: 4.4rem;
    font-weight: 300;
    white-space: normal;
-  
+   text-align: center;
+    padding-bottom: 4rem 
   }
 
 h3 {
