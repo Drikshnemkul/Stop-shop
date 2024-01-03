@@ -1,7 +1,6 @@
 import axios from "axios";
 import { createContext, useContext, useEffect, useReducer } from "react";
-import reducer from "../reducer/productReducer";
-
+import reducer from "../reducer/productReducer"
 const AppContext = createContext();
 
 const API = "https://api.pujakaitem.com/api/products";
@@ -21,7 +20,7 @@ const AppProvider = ({ children }) => {
     try {
       const res = await axios.get(url);
       const products = await res.data;
-      dispatch({ type: "MY_API_DATA", payload: products });
+      dispatch({ type: "SET_API_DATA", payload: products });
       console.log(res);
     } catch (error) {
       dispatch({ type: "API_ERROR" });
