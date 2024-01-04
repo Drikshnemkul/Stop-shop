@@ -9,7 +9,7 @@ const Services = () => {
     <>
       <Wrapper>
         <div className="container">
-          <h2>Our Services</h2>
+          <div className="common-heading">Our Services</div>
 
           <div className="grid grid-three-column">
             <div className="services-1">

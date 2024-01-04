@@ -112,6 +112,7 @@ ${"" /* resuable code section  */}
 }
 
   .common-heading {
+    text-align: center;
       font-size: 3.8rem;
       font-weight: 600;
       margin-bottom: 6rem;
