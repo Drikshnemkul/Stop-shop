@@ -28,7 +28,8 @@ const AppProvider = ({ children }) => {
       dispatch({ type: "API_ERROR" });
     }
   };
-  // 2nd api call for single product
+
+  // my 2nd api call for single product
 
   const getSingleProduct = async (url) => {
     dispatch({ type: "SET_SINGLE_LOADING" });
@@ -40,6 +41,7 @@ const AppProvider = ({ children }) => {
       dispatch({ type: "SET_SINGLE_ERROR" });
     }
   };
+
   useEffect(() => {
     getProducts(API);
   }, []);
