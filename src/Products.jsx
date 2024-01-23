@@ -1,27 +1,42 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import FormatPrice from "./Helpers/FormatPrice";
+import styled from "styled-components";
+import FilterSection from "./components/FilterSection";
+import ProductList from "./Components/ProductList";
+import Sort from "./components/Sort";
+import { useFilterContext } from "./context/filter_context";
 
-const Products = (curElem) => {
-  const { id, name, image, price, category } = curElem;
+const Products = () => {
+   const { filter_products } = useFilterContext();
+  // console.log(filter_products)
   return (
-    <NavLink to={`/singleproduct/${id}`}>
-      <div className="card">
-        <figure>
-          <img src={image} alt={name} />
-          <figcaption className="caption">{category}</figcaption>
-        </figure>
-
-        <div className="card-data">
-          <div className="card-data-flex">
-            <h3>{name}</h3>
-            {/* <p className="card-data--price">{<FormatPrice price={price} />}</p> */}
-            <p className="card-data--price">Rs {price} </p>
-          </div>
+    <Wrapper>
+      <div className="container grid grid-filter-column">
+        <div>
+          <FilterSection />
         </div>
+
+        <section className="product-view--sort">
+          <div className="sort-filter">
+            <Sort />
+          </div>
+          <div className="main-product">
+            <ProductList />
+          </div>
+        </section>
       </div>
-    </NavLink>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.section`
+  .grid-filter-column {
+    grid-template-columns: 0.2fr 1fr;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .grid-filter-column {
+      grid-template-columns: 1fr;
+    }
+  }
+`;
 
 export default Products;
