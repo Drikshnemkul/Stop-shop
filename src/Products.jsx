@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import FilterSection from "./components/FilterSection";
+import FilterSection from "./Components/FilterSection";
 import ProductList from "./Components/ProductList";
 import Sort from "./components/Sort";
 import { useFilterContext } from "./context/filter_context";
 
 const Products = () => {
-   const { filter_products } = useFilterContext();
+  // const { filter_products } = useFilterContext();
   // console.log(filter_products)
   return (
     <Wrapper>
