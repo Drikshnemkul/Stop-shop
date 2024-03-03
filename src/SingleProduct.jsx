@@ -22,7 +22,7 @@ const SingleProduct = () => {
   const {
     id: alias,
     name,
-    company,
+    // company,
     price,
     description,
     category,
@@ -94,9 +94,9 @@ const SingleProduct = () => {
               {/* <p>
                 ID : <span> {id} </span>
               </p> */}
-              <p>
+              {/* <p>
                 Brand :<span> {company} </span>
-              </p>
+              </p> */}
             </div>
             <hr />
             {stock > 0 && <AddToCart product={singleProduct} />}

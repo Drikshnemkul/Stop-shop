@@ -13,7 +13,7 @@ const filterReducer = (state, action) => {
       // console.log(maxPrice);
 
       let maxPrice = Math.max(...priceArr);
-      console.log(maxPrice);
+      // console.log(maxPrice);
       return {
         ...state,
         filter_products: [...action.payload],
