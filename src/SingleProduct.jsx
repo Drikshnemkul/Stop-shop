@@ -11,16 +11,16 @@ import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import AddToCart from "./Components/AddToCart";
 
-const API = "https://api.pujakaitem.com/api/products";
+const API = "http://localhost:5000/api/products/";
 
 const SingleProduct = () => {
   const { getSingleProduct, isSingleLoading, singleProduct } =
     useProductContext();
 
-  const { id } = useParams();
+  const { _id } = useParams();
 
   const {
-    id: alias,
+    _id: alias,
     name,
     // company,
     price,
@@ -33,9 +33,8 @@ const SingleProduct = () => {
   } = singleProduct;
 
   useEffect(() => {
-    getSingleProduct(`${API}?id=${id}`);
+    getSingleProduct(`${API}?id=${_id}`);
   }, []);
-
   if (isSingleLoading) {
     return <div className="page_loading">Loading.....</div>;
   }
